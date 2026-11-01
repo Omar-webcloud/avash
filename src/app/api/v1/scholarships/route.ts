@@ -1,0 +1,30 @@
+import { NextResponse } from 'next/server';
+import { mockScholarships } from '@/lib/mockData';
+
+export async function GET() {
+  return NextResponse.json({
+    success: true,
+    count: mockScholarships.length,
+    data: mockScholarships,
+  });
+}
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    return NextResponse.json(
+      {
+        success: true,
+        message: 'Scholarship program created successfully',
+        data: body,
+      },
+      { status: 201 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { success: false, message: 'Invalid payload' },
+      { status: 400 }
+    );
+  }
+}
+
