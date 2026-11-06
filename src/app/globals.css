@@ -24,22 +24,8 @@ body {
   min-height: 100vh;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
-  pointer-events: none;
-  z-index: 0;
-}
-
 body > * {
   position: relative;
-  z-index: 1;
 }
 
 @layer utilities {
