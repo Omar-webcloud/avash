@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+      <body className="min-h-screen flex flex-col bg-transparent text-slate-900 antialiased">
         <AppProvider>
           <Navbar />
           <main className="flex-1">
